@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: web
-        image: reddypolukarthikeya/gitops-demo-app:latest
+        image: karthikpreddy/gitops-demo-app:latest
         ports:
         - containerPort: 80
 ---
