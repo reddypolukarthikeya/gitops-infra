@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitops-demo-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gitops-demo-app
+  template:
+    metadata:
+      labels:
+        app: gitops-demo-app
+    spec:
+      containers:
+      - name: web
+        image: reddypolukarthikeya/gitops-demo-app:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gitops-demo-app
+  namespace: default
+spec:
+  selector:
+    app: gitops-demo-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
