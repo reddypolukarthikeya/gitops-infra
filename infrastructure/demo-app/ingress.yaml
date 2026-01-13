@@ -4,7 +4,7 @@ metadata:
   name: gitops-demo-app
   namespace: default
   annotations:
-    cert-manager.io/cluster-issuer: selfsigned-cluster-issuer
+    cert-manager.io/cluster-issuer: selfsigned-cluster-issuer 
 spec:
   ingressClassName: nginx
   rules:
