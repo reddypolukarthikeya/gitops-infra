@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: web
-        image: karthikpreddy/gitops-demo-app:latest
+        image: karthikpreddy/gitops-demo-app:046e228509801aa637e51ff60fe13521763d31a9
         imagePullPolicy: Always   # <--- ADD THIS LINE 
         ports:
         - containerPort: 80
